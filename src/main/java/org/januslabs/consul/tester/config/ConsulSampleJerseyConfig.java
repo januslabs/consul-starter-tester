@@ -10,4 +10,6 @@ public class ConsulSampleJerseyConfig extends ResourceConfig {
   public ConsulSampleJerseyConfig() {
     register(SampleEndpoint.class);
   }
+
+
 }
