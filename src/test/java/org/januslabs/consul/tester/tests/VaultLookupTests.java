@@ -33,8 +33,9 @@ public class VaultLookupTests {
   }
   
   @Test
-  public void contextLoads() {
+  public void contextLoads()  throws Exception{
     Assert.hasText(myAppProperties.getPassword(), "A33ur@nt");
     Assert.hasText(myAppProperties.getName(), "test");
+    Assert.notNull(myAppProperties.getMyDatasource().getConnection());
   }
 }

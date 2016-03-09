@@ -9,12 +9,11 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.expression.StandardBeanExpressionResolver;
-import org.springframework.core.PriorityOrdered;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.util.ReflectionUtils;
 
 
-public class VaultSpelFunctionProvider implements BeanFactoryPostProcessor, PriorityOrdered {
+public class VaultSpelFunctionProvider implements BeanFactoryPostProcessor {
 
   private final Class<?>[] functionHolders;
 
@@ -40,10 +39,5 @@ public class VaultSpelFunctionProvider implements BeanFactoryPostProcessor, Prio
 
   }
 
-  @Override
-  public int getOrder() {
-
-    return 10;
-  }
-
+ 
 }

@@ -1,5 +1,7 @@
 package org.januslabs.consul.tester.properties;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -18,4 +20,6 @@ public class ConsulStarterTesterProperties {
   private String password;
   @Value("#{#consul(consulClient,systemEnvironment['CAS'])}")
   private String name;
+  @Value("#{#datasource(consulClient,vaultClient,'tpmdatasource')}")
+  private DataSource myDatasource;
 }
