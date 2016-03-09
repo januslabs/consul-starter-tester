@@ -57,12 +57,17 @@ $ mvn clean install
 Configuration
 =============
 
+consul.url : http://localhost:8500 
 
-consul.url : http://localhost:8500
 consul.enabled=true
+
 spring.application.name=consul-starter-tester
+
+
 server.port=8080
+
 server.context-path=/consul-starter-tester
+
 spring.jersey.application-path=/apis
 
 
