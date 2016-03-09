@@ -11,12 +11,11 @@ public class ConsulStarterSampleApplication extends SpringBootServletInitializer
 
   @Override
   protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-      return application.sources(ConsulStarterSampleApplication.class);
+    return application.sources(ConsulStarterSampleApplication.class);
   }
 
   public static void main(String[] args) {
-      new ConsulStarterSampleApplication()
-              .configure(new SpringApplicationBuilder(ConsulStarterSampleApplication.class))
-              .run(args);
+    new ConsulStarterSampleApplication()
+        .configure(new SpringApplicationBuilder(ConsulStarterSampleApplication.class)).run(args);
   }
 }

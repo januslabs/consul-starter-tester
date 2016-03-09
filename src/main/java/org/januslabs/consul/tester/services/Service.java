@@ -10,6 +10,6 @@ public class Service {
   private String msg;
 
   public String message() {
-      return this.msg;
+    return this.msg;
   }
 }

@@ -7,8 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConsulSampleJerseyConfig extends ResourceConfig {
 
-  public ConsulSampleJerseyConfig()
-  {
+  public ConsulSampleJerseyConfig() {
     register(SampleEndpoint.class);
   }
 }

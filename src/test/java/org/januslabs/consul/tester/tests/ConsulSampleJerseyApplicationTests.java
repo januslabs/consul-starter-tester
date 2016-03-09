@@ -30,15 +30,16 @@ public class ConsulSampleJerseyApplicationTests {
 
   @Test
   public void contextLoads() {
-      ResponseEntity<String> entity = this.restTemplate
-              .getForEntity("http://localhost:" + this.port + this.contextRoot+this.jerseycontextRoot+"/hello", String.class);
-      Assert.assertEquals(entity.getStatusCode(),HttpStatus.OK);
+    ResponseEntity<String> entity = this.restTemplate.getForEntity(
+        "http://localhost:" + this.port + this.contextRoot + this.jerseycontextRoot + "/hello",
+        String.class);
+    Assert.assertEquals(entity.getStatusCode(), HttpStatus.OK);
   }
-  
+
   @Test
   public void health() {
-      ResponseEntity<String> entity = this.restTemplate
-              .getForEntity("http://localhost:" + this.port + this.contextRoot+"/health", String.class);
-      Assert.assertEquals(entity.getStatusCode(),HttpStatus.OK);
+    ResponseEntity<String> entity = this.restTemplate
+        .getForEntity("http://localhost:" + this.port + this.contextRoot + "/health", String.class);
+    Assert.assertEquals(entity.getStatusCode(), HttpStatus.OK);
   }
 }

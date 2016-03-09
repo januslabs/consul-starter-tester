@@ -14,14 +14,15 @@ public class SampleEndpoint {
   private @Autowired Service service;
 
   public SampleEndpoint(Service service) {
-      this.service = service;
+    this.service = service;
   }
+
   public SampleEndpoint() {
 
-}
+  }
 
   @GET
   public String message() {
-      return "Hello " + this.service.message();
+    return "Hello " + this.service.message();
   }
 }
