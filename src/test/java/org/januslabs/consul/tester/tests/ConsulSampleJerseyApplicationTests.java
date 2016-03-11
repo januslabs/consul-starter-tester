@@ -46,13 +46,13 @@ public class ConsulSampleJerseyApplicationTests {
     ResponseEntity<String> entity = this.restTemplate.getForEntity(
         "http://localhost:" + this.port + this.contextRoot + this.jerseycontextRoot + "/hello",
         String.class);
-    Assert.assertEquals(entity.getStatusCode(), HttpStatus.OK);
+    Assert.assertEquals( HttpStatus.OK,entity.getStatusCode());
   }
 
   @Test
   public void health() {
     ResponseEntity<String> entity = this.restTemplate
         .getForEntity("http://localhost:" + this.port + this.contextRoot + "/health", String.class);
-    Assert.assertEquals(entity.getStatusCode(), HttpStatus.OK);
+    Assert.assertEquals(HttpStatus.OK,entity.getStatusCode());
   }
 }

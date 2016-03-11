@@ -13,7 +13,7 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.util.ReflectionUtils;
 
 
-public class VaultSpelFunctionProvider implements BeanFactoryPostProcessor {
+public  class VaultSpelFunctionProvider implements BeanFactoryPostProcessor {
 
   private final Class<?>[] functionHolders;
 

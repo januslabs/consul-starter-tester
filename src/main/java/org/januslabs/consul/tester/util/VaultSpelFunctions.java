@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 
 import org.januslabs.vault.VaultClient;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
 
 import com.orbitz.consul.Consul;
 import com.zaxxer.hikari.HikariDataSource;
@@ -58,6 +59,7 @@ org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;SlowQueryReport(thres
 SlowQueryReportJmx(threshold=2000);org.apache.tomcat.jdbc.pool.interceptor.ResetAbandonedTimer" />
 
    */
+  @Bean(destroyMethod="close")
   public static DataSource datasource(Consul consulClient, VaultClient vaultclient,String key) {
     log.info("Consul {} " , consulClient);
     log.info("VaultClient {} " , vaultclient);
